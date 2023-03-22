@@ -4,18 +4,18 @@
 #include <string>
 using namespace std;
 
-bool Input(int[], int&, string);
-void InterchangeSort(int[], int);
-bool Output(int[], int, string);
+bool Input(float[], int&, string);
+void InterchangeSort(float[], int);
+bool Output(float[], int, string);
 
 int main()
 {
-	static int a[1000000];
+	static float a[1000000];
 	int n;
-	cout << "Project G1" << endl;
+	cout << "Project G2" << endl;
 	for (int i = 1; i <= 13; i++)
 	{
-		string filename = "intdata";
+		string filename = "floatdata";
 		if (i < 10)
 			filename += '0';
 		filename += to_string(i);
@@ -27,17 +27,17 @@ int main()
 			string filenameout = filename;
 			filenameout += ".outp";
 			Output(a, n, filenameout);
-			cout << "\nImport	" << filenameinp << "	successfully!";
+			cout << "\nImport	" << filenameinp << "		successfully!";
 			cout << "\nExport	" << filenameout << "	successfully!" << endl;
 		}
 		else
 			cout << "\nCan't open the file" << filename << endl;
-	}	
+	}
 	cout << endl;
 	return 1206;
 }
 
-bool Input(int a[], int& n, string filename)
+bool Input(float a[], int& n, string filename)
 {
 	ifstream fi(filename);
 	if (fi.fail() == true)
@@ -48,7 +48,7 @@ bool Input(int a[], int& n, string filename)
 	return true;
 }
 
-void InterchangeSort(int a[], int n)
+void InterchangeSort(float a[], int n)
 {
 	for (int i = 0; i <= n - 2; i++)
 		for (int j = i + 1; j <= n - 1; j++)
@@ -56,7 +56,7 @@ void InterchangeSort(int a[], int n)
 				swap(a[i], a[j]);
 }
 
-bool Output(int a[], int n, string filename)
+bool Output(float a[], int n, string filename)
 {
 	ofstream fo(filename);
 	if (fo.fail() == true)
