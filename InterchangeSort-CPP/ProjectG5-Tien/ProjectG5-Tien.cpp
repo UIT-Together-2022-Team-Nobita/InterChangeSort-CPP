@@ -94,6 +94,7 @@ bool Inp(LIST& l, string filename, int i)
 	Init(l);
 	for (int i = 1; i <= n; i++)
 	{
+		fi >> x;
 		NODE* p = GetNode(x);
 		if (p != NULL)
 			AddTail(l, p);
