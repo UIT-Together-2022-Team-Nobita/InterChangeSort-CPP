@@ -12,7 +12,7 @@ int main()
 {
 	static int a[1000000];
 	int n;
-	cout << "Project G1" << endl;
+	cout << "Project G01" << endl;
 	for (int i = 1; i <= 13; i++)
 	{
 		string filename = "intdata";
@@ -34,7 +34,7 @@ int main()
 			cout << "\nCan't open the file" << filename << endl;
 	}	
 	cout << endl;
-	return 1206;
+	return 1;
 }
 
 bool Input(int a[], int& n, string filename)
